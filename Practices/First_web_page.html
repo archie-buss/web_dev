@@ -7,9 +7,9 @@
         <meta charset="UTF-8">
         <style>
             body{
-                background-color: lightslategray;
-                font-family: Arial, sans-serif;
-                color: rgb(160, 46, 46);
+                background-color: rgb(208, 215, 221);
+                font-family:'Franklin Gothic Medium' ;
+                color: rgb(139, 173, 201);
             }
             h1{
                 text-align: center;
@@ -23,14 +23,34 @@
                 width: 200px;
                 height: 200px;
             }
+            .image-container {
+                display: flex;
+                justify-content: right;
+            }
+            .content-one{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .text{
+                text-align: left;
+            }
+            .content-two{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
             </style>
     </head>
     <body>
-       <h1>Roblox</h1>
-         <p>Roblox is such a big thing in my life because it makes me happy everytime I play it. There are many games to play and I recommend it to everyone, but maybe not kids under five because of addiction, but other than that it's great! You can play with your friends because you can play from anywhere and thats a great way to connect with your friends and new people!</p>
+       <div class="text"><h1>Roblox</h1></div><div class="content-one">
+         <p>Roblox is such a big thing in my life because it makes me happy everytime I play it. There are many games to play and I recommend it to everyone, but maybe not kids under five because of addiction, but other than that it's great! You can play with your friends because you can play from anywhere and thats a great way to connect with your friends and new people!</p></div>
 
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Hx0NZs5uxekV3eOU6CWTTXroLvnpFRCFXg&s" id="roblox-two"/>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8_Z_jlDVQilXI01URrn8YtBXySfOoCSXjnQ&s" id="roblox-one"/><h2>Some warnings</h2><p>Even though roblox is a fun way to use free time there are some things you should know. Roblox is fun, but don't spend so much time on there that it's degrading your wellbeing and health. A recommendation is that you should put on a timer, time limit, or just make sure to get off roblox once the time starts to get long or the sun starts setting. Other than that have fun on roblox and be safe!</p>
+          <div class="image-container">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Hx0NZs5uxekV3eOU6CWTTXroLvnpFRCFXg&s" id="roblox-two"/>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8_Z_jlDVQilXI01URrn8YtBXySfOoCSXjnQ&s" id="roblox-one"/>
+          </div>
+          <div class="content-two"> <h2>Some warnings</h2></div>
+          <p>Even though roblox is a fun way to use free time there are some things you should know. Roblox is fun, but don't spend so much time on there that it's degrading your wellbeing and health. A recommendation is that you should put on a timer, time limit, or just make sure to get off roblox once the time starts to get long or the sun starts setting. Other than that have fun on roblox and be safe!</p>
           <a href="https://www.roblox.com/">Roblox Website</a>
        
         <dl>
