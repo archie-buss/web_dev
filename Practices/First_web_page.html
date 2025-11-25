@@ -1,5 +1,4 @@
 <!--Ak 7th First web page-->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -52,13 +51,55 @@
           <div class="content-two"> <h2>Some warnings</h2></div>
           <p>Even though roblox is a fun way to use free time there are some things you should know. Roblox is fun, but don't spend so much time on there that it's degrading your wellbeing and health. A recommendation is that you should put on a timer, time limit, or just make sure to get off roblox once the time starts to get long or the sun starts setting. Other than that have fun on roblox and be safe!</p>
           <a href="https://www.roblox.com/">Roblox Website</a>
-       
         <dl>
             <dt>Roblox game recommendations</dt>
             <dd>1. Adopt Me</dd>
-            <dd>2. Brookhaven </dd>
+            <dd>2. Brookhaven</dd>
             <dd>3. Tower of He!!</dd>
             <dd>4. Restaurant 3</dd>
         </dl>
+
+        <button id="toggle-btn" aria-expanded="false" onclick="toggleExtraContent()">Show Extra Content</button>
+
+        <div id="extra-content" style="display: none; margin-top: 1rem;">
+            <p>Extra Content: Here are some more Roblox game recommendations!</p>
+            <!-- Image that changes on hover -->
+            <img id="hover-img"
+                 src="https://yt3.googleusercontent.com/xTxr7gmbkxiPKjrmN5ut0Kn8UcHpkkgyTv-_EeDPphcQusrWyKfSZw13EKCYXQyYdeoC3ON1zQ=s900-c-k-c0x00ffffff-no-rj"
+                 data-alt-src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Roblox_Logo_2017.png"
+                 alt="Roblox Logo"
+                 width="100"
+                 style="display:block;">
+            <p>I love playing Roblox with my cousins, they are the reason why I love playing roblox to much! I love my cousins a lot even though they get hard to deal with sometimes, maybe most times but I wouldn't trade them for anything! Last week I went to my cousins house and we played together for hours! When we looked at the time later it was already dark outside and we didn't even notice, and hadn't eaten anthing. I love my cousins cat because she is so cute and kept falling alseep on my hand while she was purring. I love being at my couins house more than my own because she's the vibe and always makes me feel loved and included.</p>
+        </div>
+    <script>
+    function toggleExtraContent() {
+        const el = document.getElementById('extra-content');
+        const btn = document.getElementById('toggle-btn');
+        const isHidden = !el || getComputedStyle(el).display === 'none';
+        if (isHidden) {
+        el.style.display = 'block';
+        btn.textContent = 'Hide Extra Content';
+        btn.setAttribute('aria-expanded', 'true');
+        } else {
+        el.style.display = 'none';
+        btn.textContent = 'Show Extra Content';
+        btn.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const img = document.getElementById('hover-img');
+        if (!img) return;
+        const altSrc = img.getAttribute('data-alt-src');
+        const orig = img.src;
+        img.addEventListener('mouseenter', function () {
+        if (altSrc) img.src = altSrc;
+        });
+        img.addEventListener('mouseleave', function () {
+        img.src = orig;
+        });
+    });
+    </script>
     </body>
-</html>    
+    </html>
