@@ -1,0 +1,108 @@
+<!-- /c:/Users/Archeantus.kamore/Documents/web_dev/Practices/staycation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Zion National Park</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef6f9; /* page background */
+            color: #0b2b3a; /* main text color */
+            padding: 20px;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 28px auto;
+            padding: 22px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 16px;
+        }
+
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #0b66b2;
+            font-weight: 700;
+        }
+        .tag {
+            margin-left: auto;
+            background: #e8f4ff;
+            color: #0b66b2;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+
+        .content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .content p {
+            flex: 1 1 60%;
+            margin: 0 0 14px 0;
+            line-height: 1.6;
+            color: #475e66;
+            font-size: 1rem;
+        }
+        .content ul {
+            flex: 1 1 60%;
+            margin: 0 0 0 18px;
+            color: #0b2b3a;
+            line-height: 1.5;
+            padding: 0;
+        }
+
+        .gallery {
+            flex: 0 0 340px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            align-self: start;
+        }
+        .gallery img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+    <div class="page"></div>
+        <header>
+            <h1>Zion National Park</h1>
+        </header>
+
+        <section class="content">
+            <p>
+                Zion National Park is famous for huge sandstone cliffs, narrow slot canyons,
+                and beautiful views. There are easy walks and hard hikes, so everyone can enjoy it. I love Zion because of its stunning scenery and variety of trails that suit all skill levels. There are also many opportunities for photography and wildlife spotting. It's a great place to connect with nature and experience the outdoors. And even if you can't visit in person, looking at photos and videos of Zion can be a fun way to explore its beauty from home.
+            </p>
+
+            <ul>
+                <li>Tall sandstone walls and great viewpoints.</li>
+                <li>Popular hikes like Angels Landing and The Narrows.</li>
+                <li>Good for photos and nature lovers.</li>
+                <li>Trails for families and for experienced hikers.</li>
+                <li>Nice wildflowers and wildlife in season.</li>
+            </ul>
+
+            <div class="gallery">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a0/a4/5c/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_99cda715b3e7208cb161" alt="Sunrise lighting up Zion's sandstone cliffs">
+                <img src="https://www.undercanvas.com/wp-content/uploads/2023/10/Zion-scaled-1.webp" alt="Hikers walking through The Narrows slot canyon">
+                <img src="https://i.natgeofe.com/n/332e6fc2-4141-4dda-8449-b480ad73ead3/NationalGeographic_2322326.jpg" alt="Panoramic view from Angels Landing">
+            </div>
+            </section>
