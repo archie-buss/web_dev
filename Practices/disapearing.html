@@ -1,0 +1,64 @@
+<!--Ak 7th disapearing immage-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All About Penguins</title>
+
+    <style>
+        /* Hidden image style */
+        #secret {
+            width: 200px;
+            display: none; /* hidden at first */
+            margin-top: 10px;
+        }
+
+        /* When hovering over the trigger area */
+        #hover-area:hover + #secret {
+            display: block;
+        }
+
+        /* The hover area (invisible box) */
+        #hover-area {
+            width: 200px;
+            height: 50px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>All About Penguins</h1>
+
+    <p>
+        Penguins are fascinating birds that live primarily in the Southern Hemisphere.
+        Even though they cannot fly, they are excellent swimmers and use their wings like flippers.
+    </p>
+
+    <p>
+        There are many species of penguins, each adapted to unique environments. 
+        Penguins are known for their tuxedo-like feathers, social behavior, 
+        and adorable waddle.
+    </p>
+
+    <h2>Popular Penguin Species</h2>
+    <ul>
+        <li>Emperor Penguin</li>
+        <li>King Penguin</li>
+        <li>Gentoo Penguin</li>
+        <li>Adélie Penguin</li>
+    </ul>
+
+    <img src="" width="250"> ttps://upload.wikimedia.org/wikipedia/commons/e/e7/Emperor_P    <h2>Secret Bonus Image</h2>
+
+    <!-- Hover area that triggers hidden image -->
+    <div id="hover-area">Hover here to reveal a secret!</div>
+
+    <!-- Hidden image -->
+    <img id="secret" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Pygoscelis_papua_Gentoo_Penguin.jpg">
+
+</body>
+</html>
