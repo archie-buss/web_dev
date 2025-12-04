@@ -78,11 +78,83 @@
             display: block;
             box-shadow: 0 6px 18px rgba(0,0,0,0.06);
         }
+
+        .hidden {
+            display: none;
+        }
+
+   
+        figure.hoverable {
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        figure.hoverable img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            transition: transform 220ms ease, filter 220ms ease;
+        }
+        figure.hoverable:hover img {
+            transform: scale(1.06);
+            filter: brightness(0.95);
+        }
+        figure.hoverable figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 8px 10px;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 180ms ease, transform 180ms ease;
+            pointer-events: none;
+        }
+        figure.hoverable:hover figcaption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .extra {
+            margin-top: 14px;
+            padding: 12px;
+            background: #f6fbff;
+            border-radius: 8px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .extra img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+        }
+
+        .toggle-btn {
+            margin: 8px 0 0 0;
+            padding: 8px 12px;
+            background: #0b66b2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
     </style>
+</head>
 <body>
     <div class="page">
         <header>
             <h1>Zion National Park</h1>
+            <button id="toggleExtra" class="toggle-btn" aria-expanded="false" aria-controls="extraSection">Show more</button>
         </header>
 
         <section class="content">
@@ -100,11 +172,36 @@
             </ul>
 
             <div class="gallery">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a0/a4/5c/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_99cda715b3e7208cb161" alt="Sunrise lighting up Zion's sandstone cliffs">
+                <figure class="hoverable" aria-hidden="false">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a0/a4/5c/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_99cda715b3e7208cb161" alt="Sunrise lighting up Zion's sandstone cliffs">
                 <img src="https://www.undercanvas.com/wp-content/uploads/2023/10/Zion-scaled-1.webp" alt="Hikers walking through The Narrows slot canyon">
                 <img src="https://i.natgeofe.com/n/332e6fc2-4141-4dda-8449-b480ad73ead3/NationalGeographic_2322326.jpg" alt="Panoramic view from Angels Landing">
             </div>
         </section>
-    </div>
+
+        
+        <div id="extraSection" class="extra hidden" aria-hidden="true">
+            <img src="https://images.squarespace-cdn.com/content/v1/545fe13ae4b085cc73a67c31/1540244348634-OVRO93YHBUH9AM6QMOWN/DSCF4212.jpg?format=1500w" alt="Zion canyon extra view">
+            <div>
+                <p style="margin:0;color:#23474b;">
+                    Start early to avoid crowds, carry plenty of water, and check weather reports before attempting narrow or exposed trails.
+                </p>
+            </div>
+
+        </div>
+    <script>
+        
+        (function () {
+            const btn = document.getElementById('toggleExtra');
+            const extra = document.getElementById('extraSection');
+
+            btn.addEventListener('click', function () {
+                const isHidden = extra.classList.toggle('hidden');
+                extra.setAttribute('aria-hidden', isHidden ? 'true' : 'false');
+                btn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+                btn.textContent = isHidden ? 'Show more' : 'Hide extra';
+            });
+        });
+    </script>
 </body>
 </html>
