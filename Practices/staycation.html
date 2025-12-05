@@ -1,4 +1,3 @@
-<!-- /c:/Users/Archeantus.kamore/Documents/web_dev/Practices/staycation.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +82,6 @@
             display: none;
         }
 
-   
         figure.hoverable {
             margin: 0;
             position: relative;
@@ -174,12 +172,19 @@
             <div class="gallery">
                 <figure class="hoverable" aria-hidden="false">
                     <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a0/a4/5c/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_99cda715b3e7208cb161" alt="Sunrise lighting up Zion's sandstone cliffs">
-                <img src="https://www.undercanvas.com/wp-content/uploads/2023/10/Zion-scaled-1.webp" alt="Hikers walking through The Narrows slot canyon">
-                <img src="https://i.natgeofe.com/n/332e6fc2-4141-4dda-8449-b480ad73ead3/NationalGeographic_2322326.jpg" alt="Panoramic view from Angels Landing">
+                    <figcaption>Sunrise View</figcaption>
+                </figure>
+                <figure class="hoverable" aria-hidden="false">
+                    <img src="https://www.undercanvas.com/wp-content/uploads/2023/10/Zion-scaled-1.webp" alt="Hikers walking through The Narrows slot canyon">
+                    <figcaption>The Narrows</figcaption>
+                </figure>
+                <figure class="hoverable" aria-hidden="false">
+                    <img src="https://i.natgeofe.com/n/332e6fc2-4141-4dda-8449-b480ad73ead3/NationalGeographic_2322326.jpg" alt="Panoramic view from Angels Landing">
+                    <figcaption>Angels Landing</figcaption>
+                </figure>
             </div>
         </section>
 
-        
         <div id="extraSection" class="extra hidden" aria-hidden="true">
             <img src="https://images.squarespace-cdn.com/content/v1/545fe13ae4b085cc73a67c31/1540244348634-OVRO93YHBUH9AM6QMOWN/DSCF4212.jpg?format=1500w" alt="Zion canyon extra view">
             <div>
@@ -187,18 +192,19 @@
                     Start early to avoid crowds, carry plenty of water, and check weather reports before attempting narrow or exposed trails.
                 </p>
             </div>
-
         </div>
+    </div>
+
     <script>
-        
-        (function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('toggleExtra');
             const extra = document.getElementById('extraSection');
 
             btn.addEventListener('click', function () {
-                const isHidden = extra.classList.toggle('hidden');
-                extra.setAttribute('aria-hidden', isHidden ? 'true' : 'false');
-                btn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
+                extra.classList.toggle('hidden');
+                const isHidden = extra.classList.contains('hidden');
+                extra.setAttribute('aria-hidden', isHidden);
+                btn.setAttribute('aria-expanded', !isHidden);
                 btn.textContent = isHidden ? 'Show more' : 'Hide extra';
             });
         });
