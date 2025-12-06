@@ -3,67 +3,161 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zions National Park</title>
+    <title>Discover Zion National Park</title>
+
     <style>
-    body{
-        font-family: Arial, sans-serif;
-        margin-left: 20px;
-        margin-right:20px
-    }
-    #Header1 {
-        text-align: center;
-        padding: 10px;
-        
-    }
-    #Header2{
-        margin-left: 500px;
-        color: grey;
-    }
-    #list1{
-        margin-left: 500px;
-    }
-    #image1{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        justify-content: 1fr 1fr;
-    }
-    #image2{
-        display: block;
-        width:50%;
-    }
-    #page{
-        padding: 10px;
-        background-color: #f0f8ff;
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e8edea;
+            color: #2b2b2b;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+        }
 
-        
-    }
+        header {
+            background-color: #457b9d;
+            color: white;
+            text-align: center;
+            padding: 30px;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2.4em;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.07);
+        }
+
+        #swapImg:hover {
+            transform: none;
+        }
+
+        ul {
+            background-color: #dff3f8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #moreInfo {
+            background-color: #bfe2eb;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #457b9d;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: #35627b;
+        }
     </style>
 </head>
-<body> <div id="page">
-   
-    <div id="Header1">
-        <h1>Zions National Park</h1>
-        <p>
-                Zion National Park is famous for huge sandstone cliffs, narrow slot canyons,
-                and beautiful views. There are easy walks and hard hikes, so everyone can enjoy it. I love Zion because of its stunning scenery and variety of trails that suit all skill levels. There are also many opportunities for photography and wildlife spotting. It's a great place to connect with nature and experience the outdoors. And even if you can't visit in person, looking at photos and videos of Zion can be a fun way to explore its beauty from home.
-        </p>
+
+<body>
+
+<header>
+    <h1>Zion National Park</h1>
+</header>
+
+<div class="container">
+
+    <p>
+        Zion National Park is one of Utah's most iconic natural wonders. Towering sandstone cliffs,
+        narrow slot canyons, and lush rivers create an unforgettable landscape. Millions of visitors come each year
+        to hike, explore, and take in the sheer beauty of the canyon walls glowing at sunrise and sunset.
+    </p>
+
+    <h2>What Makes Zion Special?</h2>
+
+    <ul>
+        <li>Home to famous hikes like Angels Landing and The Narrows</li>
+        <li>Stunning cliffs made of bright red and orange sandstone</li>
+        <li>Amazing wildlife and plant diversity in every season</li>
+        <li>Perfect for hiking, photography, and outdoor adventure</li>
+    </ul>
+
+    <div class="image-grid">
+
+        <img src="https://th.bing.com/th/id/R.0e59b76f91b00ecfcd26cafd6b5ca6b1?rik=gRqC%2brwZewc7aw&riu=http%3a%2f%2fwww.citrusmilo.com%2fzion2015%2fjoebraun_canyonoverlook01.jpg&ehk=HY1GqjHn3ijnxeKJXiPTvJymhh3ok76GLwfrN0fE2LE%3d&risl=&pid=ImgRaw&r=0"
+             alt="Zion Canyon">
+
+        <img id="swapImg"
+             src="https://th.bing.com/th/id/R.4a8025dd7c94961ae518d9458b1b63d5?rik=hTMhWTnw%2fZ1Rqw&pid=ImgRaw&r=0"
+             alt="Angels Landing">
+             
+        <img src="https://tse2.mm.bing.net/th/id/OIP.L6x6A9fBoCEmyAbAUPt6gAHaE7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+             alt="The Narrows Zion">
     </div>
-    <div id="Header2">
-        <h2>Key Features of Zion National Park</h2></div>
-        <ul><div id="list1">
-            <li>Tall sandstone walls and great viewpoints.</li>
-            <li>Popular hikes like Angels Landing and The Narrows.</li>
-            <li>Good for photos and nature lovers.</li>
-            <li>Trails for families and for experienced hikers.</li>
-            <li>Nice wildflowers and wildlife in season.</li>
-        </ul></div>
-        <img id="image1" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/a0/a4/5c/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_99cda715b3e7208cb161" alt="Sunrise lighting up Zion's sandstone cliffs">
-        <div id="image2">
-            <img src="https://i.natgeofe.com/n/332e6fc2-4141-4dda-8449-b480ad73ead3/NationalGeographic_2322326.jpg" alt="Hikers walking through The Narrows slot canyon">
-        </div>
-</body></div>
+
+    <button onclick="toggleInfo()">See More About Zion</button>
+
+    <div id="moreInfo" style="display:none;">
+        <p>
+            Beyond the famous viewpoints, Zion offers countless hidden gems—from emerald pools
+            to peaceful riverside walks. Adventurers can explore slot canyons, ride through the park's scenic drive,
+            or take guided tours. Whether you're looking for thrills or a relaxing escape, Zion has something for everyone.
+        </p>
+
+        <img src="https://th.bing.com/th/id/OIP.5K5S8L5iuaz2QTEpGe4WyAHaEQ?w=299&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1"
+             alt="Zion Valley Scenic View"
+             style="width:100%; border-radius:10px;">
+    </div>
+
+</div>
+
+<script>
+    function toggleInfo() {
+        const section = document.getElementById("moreInfo");
+        section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+
+    const swapImg = document.getElementById("swapImg");
+
+    const original = "https://th.bing.com/th/id/OIP.vZhPc15HX1AS2s4NsXM78wHaE8?w=279&h=185&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1";
+
+    swapImg.addEventListener("mouseenter", () => {
+        swapImg.src = hover;
+    });
+
+    swapImg.addEventListener("mouseleave", () => {
+        swapImg.src = original;
+    });
+</script>
+
+</body>
 </html>
